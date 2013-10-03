@@ -1,0 +1,74 @@
+@media only screen and (max-width : $initial-breakpoint)
+
+	//donation two-column into one
+	.donate_table
+		margin: 0 auto
+
+	#donation_table
+		position: relative
+		display: block
+		padding-bottom: 60px	//makes room for security seal
+		margin: 0 auto
+		td[width]
+			display: block
+			width: auto
+			margin: 0 10%
+		// reposition the security seal
+		.securitySeal
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			text-align: center
+
+		// "other" display align
+		td[colspan='5']
+			vertical-align: middle
+
+		table
+			display: block
+			width: 100%
+
+		// credit card information
+		table[width='385']
+			margin: 2em 0
+			tbody, tr
+				width: 100%
+				display: block
+			tr
+				margin-bottom: 1em
+			td
+				display: block
+				margin: 0 0
+				text-align: left !important
+				padding: 0 0
+				width: 100%
+			input[name='cc']
+				width: 99%
+				+box-sizing(border-box)
+
+
+	#donation_recurring
+		margin: 2em 0
+
+	#cardtypes
+		.dia_field_name
+			padding-right: 1em
+			white-space: nowrap
+
+/* Small-ish tablets */
+@media only screen and (max-width: 768px)
+	// kill some of the buffer
+	#donation_table td[width]
+		margin: 0 0 0 0
+
+/* Tiniest */
+@media only screen and (max-width: 400px)
+	/* put each card type on a new line */
+	#cardtypes .dia_field_name
+		padding-right: 0
+		&:after	// not working quite right on older MobileSafari
+			content: " "
+			display: block
+			width: 100%
+			height: 1px

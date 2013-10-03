@@ -1,0 +1,18 @@
+@media only screen and (max-width: $initial-breakpoint)
+	/* Overriding field styles to be a little more mobile-friendly looking */
+	body
+		#salsa
+			//TO DO: add a JS file that re-types the input fields
+			input[type='text'],
+			input[type='email'],
+			input[type='number'],
+			textarea,
+			.blockInput
+				background: $field-bg-color
+				+border-radius(4px)
+				padding: 5px
+				border: 1px solid $field-border-color
+			legend
+				font-weight: bold
+				text-transform: uppercase
+				padding-bottom: 0.5em

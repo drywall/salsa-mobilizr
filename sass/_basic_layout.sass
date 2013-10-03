@@ -1,0 +1,82 @@
+/* Just below desktop (read: tablet) */
+@media screen and (max-width: $initial-breakpoint)
+	#salsa
+		display: block !important
+		width: 94%
+		padding: 0 3%
+		margin: 1em auto 0
+		max-width: 690px
+		min-width: 225px
+		font-size: 16px
+		line-height: 1.2em
+		overflow-x: hidden
+		.actioncontent
+			width: 63%
+			margin-right: 2%
+			overflow-x: hidden
+		.targets
+			width: 35%
+			max-height: none
+			font-size: 77%
+			line-height: 1.3em
+			*
+				line-height: 1.3em
+			.recipient
+				margin: 0
+		.formRow
+			float: none
+			width: 100%
+			max-width: 600px
+			margin: 0.8em 0 0.8em 0
+			padding: 0 0 0 0
+			input, textarea, select
+				-webkit-box-sizing: border-box !important
+				-moz-box-sizing: border-box !important
+				box-sizing: border-box !important
+				width: 99% !important
+			input
+				&[type='radio'], &[type='checkbox']
+					width: auto !important
+			legend
+				font-size: 100%
+				font-family: inherit
+			fieldset
+				width: 100%
+		.diaFields
+			margin: 0 15%
+		.submit
+			margin: 2em auto
+			min-height: 45px
+		#submit
+			width: 100%
+			text-align: center
+			display: block
+			#submitContribution
+				float: none
+				margin: 0 auto
+			p
+				font-size: 90%
+				text-align: center
+				font-style: italic
+		label, legend
+			font-size: 100%
+		.error
+			width: auto
+			display: block
+
+/* Small-ish tablets */
+@media only screen and (max-width: 768px)
+	#salsa
+		.diaFields
+			float: none
+			width: 90%
+			margin: 0 5%
+	form#signup-form
+		display: none
+
+/* Tiniest */
+@media only screen and (max-width: 400px)
+	#salsa
+		.diaFields
+			width: 98%
+			margin: 0 1%
